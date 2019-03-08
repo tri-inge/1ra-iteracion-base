@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <ui:composition template="plantillaPrincipal.xhtml">
+
+        <ui:define name="titulo">Registro</ui:define>
+        <ui:define name="contenido">
+            <center>
+                <h:body>
+                    <h:form>
+
+                        <h:panelGrid columns= "2" cellpadding="5" >
+                        
+                                <h:outputLabel for="Nombre" value="Nombre:"  />
+                                <p:inputText id="nombre" value="#{profesorController.profesor.nombre}" />
+
+                                <h:outputLabel for="Contraseña" value="Contraseña:" style="font-weight:bold" />
+                                <p:inputText id="contraseña" value="#{profesorController.profesor.contrasena}" />
+
+                                <h:outputLabel for="Correo" value="Corre:" style="font-weight:bold" />
+                                <p:inputText id="correo" value="#{profesorController.profesor.correo}" />
+
+                                <h:outputLabel for="numTrabajador" value="Numero de trabajador:" style="font-weight:bold" />
+                                <p:inputText id="numTrabajador" value="#{profesorController.profesor.numTrabajador}" />
+
+                                <h:outputLabel for="departamento" value="Departamento:" style="font-weight:bold" />
+                                <p:inputText id="departamento" value="#{profesorController.profesor.departamento}" />
+
+                                <h:outputLabel for="tipoProf" value="Tipo de profesor:" style="font-weight:bold" />
+                                <p:inputText id="tipoProf" value="#{profesorController.profesor.tipoprof}" />
+  
+                        </h:panelGrid> 
+                        <p:commandButton action="#{profesorController.guardar()}" value="Registrar"/>
+              
+                                </h:form>
+
+                </h:body>
+            </center>
+        </ui:define>
+    </ui:composition>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
