@@ -3,39 +3,50 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <ui:composition template="plantillaPrincipal.xhtml">
 
         <ui:define name="titulo">Registro</ui:define>
         <ui:define name="contenido">
             <center>
                 <h:body>
-                    <h:form>
+                    <h:form id ="formulario">
 
-                        <h:panelGrid columns= "2" cellpadding="5" >
-                        
-                                <h:outputLabel for="Nombre" value="Nombre:"  />
-                                <p:inputText id="nombre" value="#{profesorController.profesor.nombre}" />
+                        <h:panelGrid columns= "2" cellpadding="5"  >
 
-                                <h:outputLabel for="Contraseña" value="Contraseña:" style="font-weight:bold" />
-                                <p:inputText id="contraseña" value="#{profesorController.profesor.contrasena}" />
+                            <h:outputLabel for="Nombre" value="Nombre:"  />
+                            <p:inputText id="nombre" required="true" requiredMessage="Rellenar campo" value="#{profesorController.profesor.nombre}" />
 
-                                <h:outputLabel for="Correo" value="Corre:" style="font-weight:bold" />
-                                <p:inputText id="correo" value="#{profesorController.profesor.correo}" />
+                            <h:outputLabel for="Contraseña" value="Contraseña:" style="font-weight:bold" />
+                            <p:inputText id="contraseña"  required="true" value="#{profesorController.profesor.contrasena}" />
 
-                                <h:outputLabel for="numTrabajador" value="Numero de trabajador:" style="font-weight:bold" />
-                                <p:inputText id="numTrabajador" value="#{profesorController.profesor.numTrabajador}" />
+                            <h:outputLabel for="Correo" value="Correo:" style="font-weight:bold" />
+                            <p:inputText id="correo" required="true" value="#{profesorController.profesor.correo}" />
 
-                                <h:outputLabel for="departamento" value="Departamento:" style="font-weight:bold" />
-                                <p:inputText id="departamento" value="#{profesorController.profesor.departamento}" />
+                            <h:outputLabel for="numTrabajador" value="Numero de trabajador:" style="font-weight:bold" />
+                            <p:inputText id="numTrabajador" required="true" value="#{profesorController.profesor.numTrabajador}" />
 
-                                <h:outputLabel for="tipoProf" value="Tipo de profesor:" style="font-weight:bold" />
-                                <p:inputText id="tipoProf" value="#{profesorController.profesor.tipoprof}" />
-  
+                            <h:outputLabel for="departamento" value="Departamento:" style="font-weight:bold" />
+                            <h:selectOneMenu id="departamento" value="#{profesorController.profesor.departamento}" style="width: 160px; " >
+                                <f:selectItem itemLabel="Ciencias de la Computacion" itemValue="Ciencias de la Computacion" />
+                                <f:selectItem itemLabel="Matematicas" itemValue="Matematicas" />
+                                <f:selectItem itemLabel="Fisica" itemValue="Fisica" />
+                                <f:selectItem itemLabel="Biologia" itemValue="Biologia"/>
+                                <f:selectItem itemLabel="Actuaria" itemValue="Actuaria"/>
+                                <f:selectItem itemLabel="Ciencias de la tierra" itemValue="Ciencias de la tierra"/>    
+                            </h:selectOneMenu>
+                            <h:outputLabel for="tipoProf" value="Tipo de profesor:" style="font-weight:bold" />
+                            <h:selectOneMenu id="tipoProf" value="#{profesorController.profesor.tipoprof}" style="width: 160px; " >
+                                <f:selectItem itemLabel="Profesor tipo A" itemValue="A" />
+                                <f:selectItem itemLabel="Profesor tipo B" itemValue="B" />
+                                <f:selectItem itemLabel="Profesor tipo C" itemValue="C" />
+                                <f:selectItem itemLabel="Profesor tipo D" itemValue="D" />
+                            </h:selectOneMenu>
                         </h:panelGrid> 
-                        <p:commandButton action="#{profesorController.guardar()}" value="Registrar"/>
-              
-                                </h:form>
+                        <p:commandButton value="Registrar" action="#{profesorController.registra()}"/>
+
+                    </h:form>
 
                 </h:body>
             </center>
@@ -43,8 +54,6 @@
     </ui:composition>
 
 </html>
-
-
 
 
 
