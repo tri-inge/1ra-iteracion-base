@@ -1,4 +1,5 @@
 com/ingenieria/biblioteca/modelo/Administrador.class
+com/ingenieria/biblioteca/web/validacionesController.class
 com/ingenieria/biblioteca/modelo/PersistenceUtil.class
 com/ingenieria/biblioteca/modelo/Profesor_.class
 com/ingenieria/biblioteca/modelo/Administrador_.class
