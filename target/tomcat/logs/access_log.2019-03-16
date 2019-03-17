@@ -1,7 +1,0 @@
-127.0.0.1 - - [16/Mar/2019:19:06:47 -0600] "GET /biblioteca/ HTTP/1.1" 404 - http-bio-8080-exec-1 0
-127.0.0.1 - - [16/Mar/2019:19:06:47 -0600] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-2 0
-127.0.0.1 - - [16/Mar/2019:19:06:54 -0600] "GET /biblioteca/index.xhtml HTTP/1.1" 404 - http-bio-8080-exec-3 0
-127.0.0.1 - - [16/Mar/2019:19:07:06 -0600] "GET / HTTP/1.1" 404 - http-bio-8080-exec-4 0
-127.0.0.1 - - [16/Mar/2019:19:07:14 -0600] "GET /biblioteca/ HTTP/1.1" 404 - http-bio-8080-exec-5 0
-127.0.0.1 - - [16/Mar/2019:19:07:16 -0600] "GET /biblioteca/ HTTP/1.1" 404 - http-bio-8080-exec-6 0
-127.0.0.1 - - [16/Mar/2019:19:27:06 -0600] "GET /biblioteca/ HTTP/1.1" 404 - http-bio-8080-exec-8 0
